@@ -1,0 +1,272 @@
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Insert title here</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Factorial</title>
+    <!-- Font Awesome -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/js/mdb.min.js"></script>
+
+   
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="form-group float-left " style="margin:0 20% 0 0">
+            <label for="exampleForm2">Select Project :</label>
+            <br />
+            <select name="projects">
+                <datalist>
+                    <option>Select Project</option>
+                    <option value="Action">Action</option>
+                    <option value="Another Action">Another Action</option>
+                    <option value="Something else Here"> Something else Here</option>
+                </datalist>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="exampleForm2">Select Sprint :</label>
+            <br />
+            <select name="sprints">
+                <datalist>
+                    <option>Select Sprint</option>
+                    <option value="Action">Action</option>
+                    <option value="Another Action">Another Action</option>
+                    <option value="Something else Here"> Something else Here</option>
+                </datalist>
+            </select>
+        </div>
+        <a href="#" class="btn btn-primary mr-5" id="open">Submit</a>
+
+
+
+        <div class="card" style="margin:20px 0 0 0; display: none" id="openDetails">
+
+
+            <!-- Card content -->
+            <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title text-center font-weight-bold text-uppercase py-4">Capacity Details</h4>
+                <!-- Text -->
+                <table class="table table-bordered">
+
+                    <tr>
+                        <th>Number of Resources</th>
+                        <td>11</td>
+
+                    </tr>
+                    <tr>
+                        <th>Working Days in Sprint</th>
+                        <td>8</td>
+
+                    </tr>
+
+                    <tr>
+                        <th>Ideal No. of Hours spent by a resource per day</th>
+                        <td>8</td>
+
+                    </tr>
+
+                    <tr>
+                        <th>Ideal Hours per Sprint</th>
+                        <td>708</td>
+
+                    </tr>
+
+
+
+                </table>
+                <!-- Button -->
+
+                <div class="cardButtons mt-3">
+                    <a href="#" class="btn btn-primary mr-5" id="resource">Add Resources</a>
+                    <a href="#" class="btn btn-primary mr-5" id="leave">Add Leaves</a>
+
+
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="card mt-5" id="addLeave" style="display: none">
+            <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Leave Details</h3>
+            <div class="card-body">
+                <div id="table" class="table-editable">
+                    <span class="table-add float-right mb-3 mr-2">
+                        <a href="#!" class="text-success">
+                            <i class="fa fa-plus fa-2x" aria-hidden="true"></i>
+                        </a>
+                    </span>
+
+                    Resources:
+                    <span>4</span>
+                    <br>
+
+                    <table class="table table-bordered table-responsive-md table-striped text-center">
+                        <tr>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Hours</th>
+                            <th class="text-center">Action</th>
+
+                        </tr>
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Deepthi</td>
+                            <td class="pt-3-half" contenteditable="true">30</td>
+
+
+                            <td>
+                                <span class="table-edit">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                </span>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Deepthi</td>
+                            <td class="pt-3-half" contenteditable="true">30</td>
+
+
+                            <td>
+                                <span class="table-edit">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                </span>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                </span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td class="pt-3-half" contenteditable="true">Deepthi</td>
+                            <td class="pt-3-half" contenteditable="true">30</td>
+
+
+                            <td>
+                                <span class="table-edit">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Edit</button>
+                                </span>
+                                <span class="table-remove">
+                                    <button type="button" class="btn btn-danger btn-rounded btn-sm my-0">Remove</button>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Total Hours</th>
+                            <td colspan="2">75</td>
+                        </tr>
+
+                        <tr>
+                            <th>Available Hours</th>
+                            <td colspan="2">75</td>
+                        </tr>
+                    </table>
+
+                    <span class="table-Save align-center">
+
+                        <button type="button" class="btn btn-danger float-right btn-rounded btn-sm ml-5 ">Save</button>
+                    </span>
+
+
+                </div>
+            </div>
+
+
+        </div>
+        <div class="card mt-5" style="display: none;" id="addResource">
+
+
+            <!-- Card content -->
+            
+
+                <!-- Title -->
+                <h4 class="card-header text-center font-weight-bold text-uppercase py-4">Resources</h4>
+                <!-- Text -->
+                <!-- Button -->
+                <div class="card-body">
+                <form method="POST">
+                    <div class="form-group">
+                        <label for="exampleForm2">First Name :</label>
+                        <input type="text" id="exampleForm2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleForm2">Last Name :</label>
+                        <input type="text" id="exampleForm2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleForm2">Project Name :</label>
+                        <br />
+                        <select name="projects">
+                            <datalist>
+                                <option>Action</option>
+                                <option>Another Action</option>
+                                <option>Something else Here</option>
+                            </datalist>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleForm2">Experience :</label>
+                        <input type="text" id="exampleForm2" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleForm2">Skills :</label>
+                        <input type="text" id="exampleForm2" class="form-control">
+                    </div>
+
+                    <div class="form-group float-right">
+                        <button type="button" class="btn btn-primary ml-5">Save</button>
+                        <button type="button" class="btn btn-primary ml-5">Save & Back</button>
+                        <button type="button" class="btn btn-primary ml-5">Cancel</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+        $(document).ready(function () {
+
+            $("#leave").click(function () {
+                $("#addLeave").slideToggle(1000);
+            });
+    
+            $("#resource").click(function () {
+                $("#addResource").slideToggle(1000);
+            });
+
+            $("#open").click(function () {
+                $("#openDetails").slideToggle(1000);
+            });
+   
+        });
+    </script>
