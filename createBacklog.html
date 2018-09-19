@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Create BackLog</title>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   
+    <!-- Font Awesome -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Material Design Bootstrap -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/css/mdb.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JQuery -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.10/js/mdb.min.js"></script>
+    
+    <script>
+            $(document).ready(function(){
+                $("#userStory").click(function(){
+                    $("#adduserstory").fadeToggle(2000);
+                });
+            });
+            </script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-12">
+            <div class="card mt-5">
+              <h3 class="text-center my-4"><b>Project BackLog<b></h1>
+                <div class="card-body">
+                  <form  method="POST">
+                     <div class="form-group">
+                        <label for="exampleForm2">User Story</label>
+                        <input type="text" id="exampleForm2" class="form-control">
+                        <button class="btn btn-secondary" id="userStory" type="button">Add User Story</button>  
+                        
+                        <div class="form-group" id="adduserstory" style="display:none">
+                                <label for="exampleForm2">Enter User Story</label> 
+                                <input type="text" id="exampleForm2" class="form-control">
+                                <button class="btn btn-success" type="button">Add</button>  
+                    </div>
+
+                        
+                    <div class="form-group">
+                        <label for="exampleForm2">Story Point</label>
+                        <input type="text" id="exampleForm2" class="form-control">
+                        <button type="button" class="btn btn-primary">Add Story Point</button>
+                    </div>
+                    <button type="submit" onclick="validateForm()" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+</html>
